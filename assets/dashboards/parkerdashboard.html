@@ -1,0 +1,86 @@
+<div class="col-md-12">
+
+    <div class="col-12 dashboard-gear-icon-wrapper">
+        <h5>Chart Content is Loaded From static HTML file</h5>
+        <div class="dashboard-gear-icon" style="cursor: pointer;"><i class="fa fa-gear" data-toggle="modal" data-target="#config_dashboard" title="Configure"></i></div>
+
+        <table class="table table-borderless table-sm mb-3" id="noti_fav">
+            <thead class="thead-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Sensor</th>
+                    <th>Sensor Id</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pressure</td>
+                    <td>25%</td>
+                    <td>E4000082</td>
+                    <td>298psi</td>
+                </tr>
+                <tr>
+                    <td>Pressure</td>
+                    <td>20%</td>
+                    <td>E4000081</td>
+                    <td>395psi</td>
+                </tr>
+                <tr>
+                    <td>Humidity</td>
+                    <td>25%</td>
+                    <td>E4000092</td>
+                    <td>15%</td>
+                </tr>
+                <tr>
+                    <td>Flow</td>
+                    <td>27%</td>
+                    <td>E4000092</td>
+                    <td>750SCFM</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-12">
+        <p id="world">Dynamic Loaded chart</p>
+        <div id="liveChart" style="width: 100%; height: 280px"></div>
+    </div>
+    <div class="col-12">
+            
+        </div>
+</div>
+
+<!-- Configuration -->
+<div id="config_dashboard" class="modal fade">
+    <div class="modal-dialog modal-sm modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Configure Dashboard</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="type_of_data">Type of data</label>
+                    <select id="type_of_data" class="form-control form-control-sm">
+                        <option value="1">Temparature</option>
+                        <option value="2">Humidity</option>
+                        <option value="3">Battey strength</option>
+                        <option>Pressure</option>
+                    </select>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" id="dashboard_config_btncancel" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-info btn-sm" id="dashboard_config_btncreate">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- <script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script> -->
+<!-- <script src="lineChartLive.js"></script> -->
